@@ -19,7 +19,7 @@
         </head>
         <body>
             <h:form>
-                <h1><h:outputText value="JavaServer Faces" /></h1>
+                <h1><h:outputText value="Esto es un cambio" /></h1>
                 <br/>
                 <h:commandLink action="#{product.listSetup}" value="All Product Items" id="linkProds" />
                 <br/>
