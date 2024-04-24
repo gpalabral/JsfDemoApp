@@ -22,7 +22,7 @@ public class Product implements Serializable {
     @Column(name = "PURCHASE_COST")
     private BigDecimal purchaseCost;
     @Column(name = "QUANTITY_ON_HAND")
-    private Integer quantityOnHand;
+    private Integer quantityOnHand
     @Column(name = "MARKUP")
     private BigDecimal markup;
     @Column(name = "AVAILABLE")
