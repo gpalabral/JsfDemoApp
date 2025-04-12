@@ -21,3 +21,5 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+JsfDemoApp/target/surefire-reports/com.iknow.crud.app.ProductTest.txt
+JsfDemoApp/target/surefire-reports/TEST-com.iknow.crud.app.ProductTest.xml
