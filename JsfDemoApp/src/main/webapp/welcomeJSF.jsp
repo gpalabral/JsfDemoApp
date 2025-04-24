@@ -19,7 +19,7 @@
         </head>
         <body>
             <h:form>
-                <h1><h:outputText value="Hola SIS 313!!" /></h1>
+                <h1><h:outputText value="Hola SIS 312 - Gestion de Calidad -  hoy es 23/Abril!!" /></h1>
                 <br/>
                 <h:commandLink action="#{product.listSetup}" value="All Product Items" id="linkProds" />
                 <br/>
