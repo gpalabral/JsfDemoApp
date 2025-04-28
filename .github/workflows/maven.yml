@@ -49,6 +49,6 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        file: ./JsfDemoApp/Dockerfile
+        file: ./JsfDemoApp/DockerfileGithubAction
         push: true
         tags: gustavopalabral/cicddockerimagegithubactions
