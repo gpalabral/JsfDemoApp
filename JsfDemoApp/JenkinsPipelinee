@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    tools {
+        maven "MVN_339"
+    }
+
+    stages {
+        stage('Github') {
+            steps {
+                git 'https://github.com/gpalabral/JsfDemoApp.git'
+            }
+        }
+        stage('Clean Compile'){
+            steps{
+                dir('JsfDemoApp'){
+                    sh 'mvn clean compile package'    
+                }
+            }    
+        }
+        stage('Deployment a Tomcat'){
+            steps{
+                dir('JsfDemoApp'){
+                    deploy adapters: [tomcat8(credentialsId: '88f65f86-bb87-4529-9567-ac1f2adb1939', path: '', url: 'http://localhost:9191')], contextPath: 'JsfDemoAppFromJenkins', war: 'target/*.war'
+                }
+            }    
+        }
+    }
+}
