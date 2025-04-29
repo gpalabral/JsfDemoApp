@@ -47,8 +47,10 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Open Web Client Directory
+    - name: Open Directories
       run: |
+        ls -la
+        cd ./JsfDemoApp/target
         ls -la
       
     - name: Build and push
