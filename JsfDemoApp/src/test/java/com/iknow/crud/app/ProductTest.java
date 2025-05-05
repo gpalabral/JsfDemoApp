@@ -28,13 +28,15 @@ public class ProductTest {
     @Test
     public void crearProducto(){
         product = new Product(1);
-        product.setDescription("Product Test X");
+        product.setDescription("Product Test");
         product.setPurchaseCost(new BigDecimal(100.0));
         
         ProductController controller = new ProductController();
         controller.setIsWeb(false);
-        
-        controller.setProduct(product);
+
+
+        Product productB = new Product(2);
+        controller.setProduct(productB);
         
         
         controller.create();
