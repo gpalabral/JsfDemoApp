@@ -35,8 +35,8 @@ public class ProductTest {
         controller.setIsWeb(false);
 
 
-        Product productB = new Product(2);
-        controller.setProduct(productB);
+        //Product productB = new Product(2);
+        controller.setProduct(product);
         
         
         controller.create();
