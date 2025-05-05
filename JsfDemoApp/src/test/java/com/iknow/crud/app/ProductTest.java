@@ -28,7 +28,7 @@ public class ProductTest {
     @Test
     public void crearProducto(){
         product = new Product(1);
-        product.setDescription("Product Test");
+        product.setDescription("Product Test X");
         product.setPurchaseCost(new BigDecimal(100.0));
         
         ProductController controller = new ProductController();
