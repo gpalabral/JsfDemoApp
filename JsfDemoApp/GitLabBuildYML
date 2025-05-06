@@ -1,0 +1,51 @@
+image: maven:3-openjdk-8
+
+variables:
+  # `showDateTime` will show the passed time in milliseconds. You need to specify `--batch-mode` to make this work.
+  MAVEN_OPTS:
+    -Dmaven.repo.local=.m2/repository
+    
+stages:
+    - build
+    - test
+    - package
+    - deploy
+
+cache:
+  paths:
+    - .m2/repository
+    - target
+
+build_job:
+  stage: build
+  tags:
+    - gitlab-org-docker
+  script:
+    - echo "Maven compile started"
+    - "cd JsfDemoApp"
+    - "mvn clean compile"
+
+test_job:
+  stage: test
+  tags:
+    - gitlab-org-docker
+  script:
+    - echo "Maven test started"
+    - "cd JsfDemoApp"
+    - "mvn test"
+
+package_job:
+  stage: package
+  tags:
+    - gitlab-org-docker
+  script:
+    - echo "Maven package started"
+    - "cd JsfDemoApp"
+    - "mvn package"
+
+deploy_job:
+  stage: deploy
+  tags:
+    - gitlab-org-docker
+  script:
+    - echo "Maven deploy started"
